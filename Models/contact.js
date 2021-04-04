@@ -1,7 +1,11 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+exports.Model = void 0;
+const mongoose_1 = __importDefault(require("mongoose"));
+const Schema = mongoose_1.default.Schema;
 const ContactSchema = new Schema({
     FullName: String,
     EmailAddress: String,
@@ -9,6 +13,5 @@ const ContactSchema = new Schema({
 }, {
     collection: "contacts"
 });
-const Model = mongoose.model("Contact", ContactSchema);
-module.exports.Model = Model;
+exports.Model = mongoose_1.default.model("Contact", ContactSchema);
 //# sourceMappingURL=contact.js.map
