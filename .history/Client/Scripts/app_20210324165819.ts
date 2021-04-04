@@ -1,7 +1,65 @@
 
 namespace core
-{    
-  
+{
+
+        /**
+     * This function highlights the active link in the nav bar
+     *
+     * @param {string} link
+     * @param {string} [data=""]
+     */
+    /* function highlightActiveLink(link:string):void
+    {
+      // swap active link
+      $(`#${router.ActiveLink}`).removeClass("active"); // removes highlighted link
+            
+      if(link == "logout")
+      {
+        sessionStorage.clear();
+        router.ActiveLink = "login";
+      }
+      else
+      {
+        router.ActiveLink = link;
+      }
+      $(`#${router.ActiveLink}`).addClass("active"); // applies highlighted link to new page
+    } */
+
+    /**
+     * This function switches page content relative to the link that is passed into the function
+     * optionally, link data can be also be passed 
+     *
+     * @param {string} link
+     * @param {string} [data=""]
+     */
+    /* function loadLink(link:string, data:string = ""):void
+    {
+      //highlightActiveLink(link);
+      router.LinkData = data;
+      loadContent(router.ActiveLink, ActiveLinkCallBack(router.ActiveLink));
+      history.pushState({},"", router.ActiveLink); // this replaces the url displayed in the browser
+    } */
+
+    /**
+     * Inject the Navigation bar into the Header element and highlight the active link based on the pageName parameter
+     *
+     * @param {string} pageName
+     */
+    /* function loadHeader(pageName:string):void
+    {
+      // inject the Header
+      $.get("./components/header.html", function(data)
+      {
+        $("header").html(data); // load the navigation bar
+        
+        $(`#${pageName}`).addClass("active"); // highlight active link
+
+        //addLinkEvents();
+        
+      });
+    } */
+
+    
     function testFullName(): void
     {
       let messageArea = $("#messageArea").hide();
@@ -101,7 +159,7 @@ namespace core
       // don't allow visitors to go here
       authGuard();
 
-      /* if (localStorage.length > 0) 
+      if (localStorage.length > 0) 
       {
 
         let contactList = document.getElementById("contactList");
@@ -153,7 +211,7 @@ namespace core
       {
       //loadLink("edit");
       location.href = '/edit';
-      }); */
+      });
     }
 
     /* function displayEdit(): void

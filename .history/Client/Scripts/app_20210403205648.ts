@@ -1,7 +1,6 @@
 
 namespace core
 {    
-  
     function testFullName(): void
     {
       let messageArea = $("#messageArea").hide();

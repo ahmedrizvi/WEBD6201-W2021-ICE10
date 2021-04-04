@@ -52,7 +52,7 @@ router.get('/login', function(req, res, next)
 /* GET login page - with /login */
 router.post('/login', function(req, res, next) 
 {
-    res.redirect('/contact-list');
+  res.render('index', { title: 'Contact List', page: 'contact-list', displayName: req.body.username});
 });
 
 
@@ -66,6 +66,8 @@ router.get('/register', function(req, res, next)
 /* GET register page - with /register */
 router.get('/contact-list', function(req, res, next) 
 {
+    //
+
     // db.contacts.find()
     Contact.find(function(err, contacts){
       if(err)
@@ -73,6 +75,7 @@ router.get('/contact-list', function(req, res, next)
         return console.error(err);
       }
       res.render('index', { title: 'Contact List', page: 'contact-list', contacts: contacts, displayName: 'temp'  });
+    });
 });
 
 /* GET login page - with /login */

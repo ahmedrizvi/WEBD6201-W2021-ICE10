@@ -1,7 +1,7 @@
 
 namespace core
-{    
-  
+{
+   
     function testFullName(): void
     {
       let messageArea = $("#messageArea").hide();
@@ -92,7 +92,6 @@ namespace core
           }
 
           location.href = '/contact';
-          //loadLink("contact"); // reload contact page
         });
     }
 

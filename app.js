@@ -54,6 +54,6 @@ exports.app.use(function (err, req, res, next) {
     let message = err.message;
     let error = req.app.get('env') === 'development' ? err : {};
     res.status(err.status || 500);
-    res.render('error', { message: message, error: error, title: '', page: '' });
+    res.render('error', { message: message, error: error, title: '', page: '', displayName: '' });
 });
 //# sourceMappingURL=app.js.map
